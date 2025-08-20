@@ -11,7 +11,7 @@ namespace BreakingGymDAL
 {
     public class ClienteDAL
     {
-        public static List<ClienteEN> MostrarCliente() { List<ClienteEN> _Lista = new List<ClienteEN>(); using (IDbConnection _conn = ComunBD.ObtenerConexion(ComunBD.TipoBD.SqlServer)) { _conn.Open(); SqlCommand _comando = new SqlCommand("MostrarCliente", _conn as SqlConnection); _comando.CommandType = CommandType.StoredProcedure; IDataReader _reader = _comando.ExecuteReader(); while (_reader.Read()) { _Lista.Add(new ClienteEN { Id = _reader.GetInt32(0), IdRol = _reader.GetInt32(1), IdTipoDocumento = _reader.GetInt32(2), Documento = _reader.GetString(3), Nombre = _reader.GetString(4), Apellido = _reader.GetString(5), Celular = _reader.GetString(6) }); } _conn.Close(); } return _Lista; }
+        public static List<ClienteEN> MostrarCliente() { List<ClienteEN> _Lista = new List<ClienteEN>(); using (IDbConnection _conn = ComunBD.ObtenerConexion(ComunBD.TipoBD.SqlServer)) { _conn.Open(); SqlCommand _comando = new SqlCommand("MostrarCliente", _conn as SqlConnection); _comando.CommandType = CommandType.StoredProcedure; IDataReader _reader = _comando.ExecuteReader(); while (_reader.Read()) { _Lista.Add(new ClienteEN { Id = _reader.GetInt32(0), IdRol = _reader.GetInt32(1), IdTipoDocumento = _reader.GetInt32(2), Documento = _reader.GetString(3), Nombre = _reader.GetString(4), Apellido = _reader.GetString(5), Celular = _reader.GetString(6), TarjetaRFID=_reader.GetString(7) }); } _conn.Close(); } return _Lista; }
         public static int GuardarCliente(ClienteEN pclienteEN)
         {
             using (IDbConnection _conn = ComunBD.ObtenerConexion(ComunBD.TipoBD.SqlServer))
