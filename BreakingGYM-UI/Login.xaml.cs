@@ -109,5 +109,10 @@ namespace BreakingGymUI
                 mostrando = true;
             }
         }
+
+        private void txtCorreo_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
