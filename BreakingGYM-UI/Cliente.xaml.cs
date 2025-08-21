@@ -189,9 +189,9 @@ namespace BreakingGymUI
                 TxtNombre.Text = row["Nombre"].ToString();
                 TxtApellido.Text = row["Apellido"].ToString();
                 TxtCelular.Text = row["Celular"].ToString();
-                TxtTarjetaRFID.Text = row["TarjetaRFID"].ToString();
                 TxtDocumento.Text = row["Documento"].ToString();
-           
+                TxtTarjetaRFID.Text = row["TarjetaRFID"].ToString();
+
             }
         }
 
