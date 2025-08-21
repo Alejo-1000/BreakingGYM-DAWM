@@ -161,15 +161,25 @@ namespace BreakingGymUI
         {
             if (!string.IsNullOrWhiteSpace(txtId.Text))
             {
-                btnModificar.IsEnabled = true;
-                btnEliminar.IsEnabled = true;
-                btnLimpiar.IsEnabled = true;
+                btnModificar.Visibility = Visibility.Visible;
+                btnEliminar.Visibility = Visibility.Visible;
             }
             else
             {
-                btnModificar.IsEnabled = false;
-                btnEliminar.IsEnabled = false;
-                btnLimpiar.IsEnabled = false;
+                btnModificar.Visibility = Visibility.Collapsed;
+                btnEliminar.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void dgMostrarTipoDocumento_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dgMostrarTipoDocumento.SelectedItem != null)
+            {
+                // Obtener el elemento seleccionado y asignar sus valores a los campos de texto
+                TipoDocumentoEN Seleccionado = (TipoDocumentoEN)dgMostrarTipoDocumento.SelectedItem;
+                txtId.Text = Seleccionado.Id.ToString();
+                TxtNombre.Text = Seleccionado.Nombre;
+                
             }
         }
     }

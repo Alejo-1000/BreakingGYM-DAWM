@@ -129,15 +129,13 @@ namespace BreakingGymUI
         {
             if (!string.IsNullOrWhiteSpace(txtId.Text))
             {
-                btnEliminar.IsEnabled = true;   // Habilitar botón eliminar si hay un Id
-                btnModificar.IsEnabled = true;  // Habilitar botón modificar si hay un Id
-                btnLimpiar.IsEnabled = true;    // Habilitar el botón de limpiar
+                btnModificar.Visibility = Visibility.Visible;
+                btnEliminar.Visibility = Visibility.Visible;
             }
             else
             {
-                btnEliminar.IsEnabled = false;  // Deshabilitar si no hay Id
-                btnModificar.IsEnabled = false; // Deshabilitar si no hay Id
-                btnLimpiar.IsEnabled = false;   // Deshabilitar el botón de limpiar
+                btnEliminar.Visibility = Visibility.Collapsed;
+                btnModificar.Visibility = Visibility.Collapsed;
             }
         }
 
@@ -197,6 +195,17 @@ namespace BreakingGymUI
         private void btnRegresar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void dgMostrarRol_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (dgMostrarRol.SelectedItem != null)
+            {
+                // Obtener el elemento seleccionado y asignar sus valores a los campos de texto
+                RolEN Seleccionado = (RolEN)dgMostrarRol.SelectedItem;
+                txtId.Text = Seleccionado.Id.ToString();
+                txtNombre.Text = Seleccionado.Nombre;
+            }
         }
     }
 }

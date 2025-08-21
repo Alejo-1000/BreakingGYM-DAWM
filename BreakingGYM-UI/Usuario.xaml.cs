@@ -213,16 +213,13 @@ namespace BreakingGymUI
         {
             if (!string.IsNullOrWhiteSpace(txtId.Text))
             {
-                btnEliminar.IsEnabled = true;   // habilitar botón eliminar
-                btnModificar.IsEnabled = true;  // habilitar botón modificar
-
+                btnModificar.Visibility = Visibility.Visible;
+                btnEliminar.Visibility = Visibility.Visible;
             }
-
             else
             {
-                btnEliminar.IsEnabled = false;
-                btnModificar.IsEnabled = false;
-
+                btnModificar.Visibility = Visibility.Collapsed;
+                btnEliminar.Visibility = Visibility.Collapsed;
             }
         }
     }

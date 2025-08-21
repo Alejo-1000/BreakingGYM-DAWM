@@ -170,19 +170,27 @@ namespace BreakingGymUI
         {
             if (!string.IsNullOrWhiteSpace(txtId.Text))
             {
-                btnLimpiar.IsEnabled = true;    // Habilitar el botón de limpiar al ingresar un ID
-                btnModificar.IsEnabled = true;  // Habilitar el botón de modificar si hay un ID
-                btnEliminar.IsEnabled = true;   // Habilitar el botón de eliminar si hay un ID
+                btnModificar.Visibility = Visibility.Visible;
+                btnEliminar.Visibility = Visibility.Visible;
             }
             else
             {
-                btnModificar.IsEnabled = false; // Deshabilitar el botón de modificar si no hay ID
-                btnEliminar.IsEnabled = false;  // Deshabilitar el botón de eliminar si no hay ID
-                btnLimpiar.IsEnabled = false;   // Deshabilitar el botón de limpiar
+                btnEliminar.Visibility = Visibility.Collapsed;
+                btnModificar.Visibility = Visibility.Collapsed;
             }
 
         }
 
-
+        private void dgMostrarServicio_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+              if (dgMostrarServicio.SelectedItem != null)
+              {
+                    // Obtener el elemento seleccionado y asignar sus valores a los campos de texto
+                    ServicioEN Seleccionado = (ServicioEN)dgMostrarServicio.SelectedItem;
+                    txtId.Text = Seleccionado.Id.ToString();
+                    txtNombre.Text = Seleccionado.Nombre;
+                    txtDescripcion.Text = Seleccionado.Descripcion;
+              }
+        }
     }
 }

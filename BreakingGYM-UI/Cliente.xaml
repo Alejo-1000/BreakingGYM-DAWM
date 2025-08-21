@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:BreakingGymUI"
         mc:Ignorable="d"
         Title="Cliente" Height="450" Width="800">
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="1"/>
@@ -37,19 +37,19 @@
                 <ImageBrush ImageSource="/mas.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="692,239,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnEliminar_Click">
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="692,239,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnEliminar_Click" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/eliminar (2).png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="691,330,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnModificar_Click">
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="691,330,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnModificar_Click" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
         </Button>
         <ComboBox x:Name="CbxRol" HorizontalAlignment="Left" Height="26" Margin="117,154,0,0" VerticalAlignment="Top" Width="150"/>
         <ComboBox x:Name="Cbxdocumento" HorizontalAlignment="Left" Height="26" Margin="438,109,0,0" VerticalAlignment="Top" Width="158"/>
-        <TextBox x:Name="TxtId" HorizontalAlignment="Left" Height="26" Margin="46,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" TextChanged="txtId_TextChanged"/>
+        <TextBox x:Name="TxtId" HorizontalAlignment="Left" Height="26" Margin="46,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" TextChanged="txtId_TextChanged" Visibility="Collapsed"/>
         <TextBox x:Name="TxtTarjetaRFID" HorizontalAlignment="Left" Margin="670,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
     </Grid>

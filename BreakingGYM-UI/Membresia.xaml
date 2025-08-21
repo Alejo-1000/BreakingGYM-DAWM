@@ -19,20 +19,20 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="BtnGuardar" Content="" Margin="474,348,280,43" BorderBrush="{x:Null}" Click="BtnGuardar_Click">
+        <Button x:Name="BtnGuardar" Content="" Margin="474,348,276,38" BorderBrush="{x:Null}" Click="BtnGuardar_Click" Width="50" Height="50">
             <Button.Background>
                 <ImageBrush ImageSource="/mas.png"/>
             </Button.Background>
 
         </Button>
-        <Button x:Name="BtnModificar" Content="" Margin="692,346,62,43" BorderBrush="{x:Null}" Click="BtnModificar_Click" >
+        <Button x:Name="BtnModificar" Content="" Margin="692,346,60,38" BorderBrush="{x:Null}" Click="BtnModificar_Click" Height="50" Width="50" >
             <Button.Background>
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
 
         </Button>
-        <DataGrid x:Name="DataMembresia" HorizontalAlignment="Left" Height="241" Margin="33,174,0,0" VerticalAlignment="Top" Width="347" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <Button x:Name="BtnEliminar" Content="" HorizontalAlignment="Left" Height="42" Margin="584,348,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}" Click="BtnEliminar_Click" >
+        <DataGrid x:Name="DataMembresia" HorizontalAlignment="Left" Height="241" Margin="33,174,0,0" VerticalAlignment="Top" Width="347" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="DataMembresia_SelectionChanged"/>
+        <Button x:Name="BtnEliminar" Content="" HorizontalAlignment="Left" Height="50" Margin="584,348,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="BtnEliminar_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="/eliminar (2).png"/>
             </Button.Background>
@@ -59,16 +59,16 @@
 
         </Button>
         <Label Content="Membresía" HorizontalAlignment="Left" Height="83" Margin="318,0,0,0" VerticalAlignment="Top" Width="354" FontSize="36" Foreground="White" FontFamily="Arial Rounded MT Bold"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="22" Margin="605,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135"/>
-        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Height="26" Margin="605,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135" />
-        <TextBox x:Name="txtDuracion" HorizontalAlignment="Left" Height="26" Margin="605,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135"/>
-        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Height="26" Margin="605,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="135"/>
-        <Label Content="Nombre" HorizontalAlignment="Left" Height="28" Margin="478,104,0,0" VerticalAlignment="Top" Width="69" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
-        <Label Content="Servicio" HorizontalAlignment="Left" Height="28" Margin="479,146,0,0" VerticalAlignment="Top" Width="69" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14" RenderTransformOrigin="0.517,0.073"/>
-        <Label Content="Precio" HorizontalAlignment="Left" Height="28" Margin="479,188,0,0" VerticalAlignment="Top" Width="70" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14" RenderTransformOrigin="0.821,0.335"/>
-        <Label Content="Duracion&#xD;&#xA;" HorizontalAlignment="Left" Height="28" Margin="479,228,0,0" VerticalAlignment="Top" Width="74" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
-        <Label Content="Descripción&#xD;&#xA;" HorizontalAlignment="Left" Height="28" Margin="478,272,0,0" VerticalAlignment="Top" Width="94" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
-        <ComboBox x:Name="CbxIdServicio" HorizontalAlignment="Left" Height="14" Margin="606,148,0,0" VerticalAlignment="Top" Width="134" SelectionChanged="CbxIdServicio_SelectionChanged"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Height="22" Margin="593,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="txtPrecio" HorizontalAlignment="Left" Height="26" Margin="593,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175" />
+        <TextBox x:Name="txtDuracion" HorizontalAlignment="Left" Height="26" Margin="593,230,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
+        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Height="26" Margin="593,274,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="175"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Height="28" Margin="485,106,0,0" VerticalAlignment="Top" Width="69" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
+        <Label Content="Servicio" HorizontalAlignment="Left" Height="28" Margin="486,148,0,0" VerticalAlignment="Top" Width="69" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14" RenderTransformOrigin="0.517,0.073"/>
+        <Label Content="Precio" HorizontalAlignment="Left" Height="28" Margin="486,190,0,0" VerticalAlignment="Top" Width="70" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14" RenderTransformOrigin="0.821,0.335"/>
+        <Label Content="Duracion&#xD;&#xA;" HorizontalAlignment="Left" Height="28" Margin="486,230,0,0" VerticalAlignment="Top" Width="74" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
+        <Label Content="Descripción&#xD;&#xA;" HorizontalAlignment="Left" Height="28" Margin="485,274,0,0" VerticalAlignment="Top" Width="94" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
+        <ComboBox x:Name="CbxIdServicio" HorizontalAlignment="Left" Height="14" Margin="594,148,0,0" VerticalAlignment="Top" Width="174" SelectionChanged="CbxIdServicio_SelectionChanged"/>
         <TextBox x:Name="TxtId" HorizontalAlignment="Left" Margin="272,16,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="32" Height="16" TextChanged="TxtId_TextChanged"/>
 
         <Menu HorizontalAlignment="Left" Height="43" Margin="14,6,0,0" VerticalAlignment="Top" Width="47" Background="{x:Null}">

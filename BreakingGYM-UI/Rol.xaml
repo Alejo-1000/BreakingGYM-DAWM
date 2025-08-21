@@ -15,7 +15,7 @@
             </LinearGradientBrush>
         </Grid.Background>
 
-        <DataGrid x:Name="dgMostrarRol" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="63,129,183,57"/>
+        <DataGrid x:Name="dgMostrarRol" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="63,129,183,57" SelectionChanged="dgMostrarRol_SelectionChanged"/>
         <Label Content="Rol" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial Rounded MT Bold"/>
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="166,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="405"/>
         <Label Content="Rol" HorizontalAlignment="Left" Margin="114,83,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="14" Foreground="White"/>
@@ -42,7 +42,7 @@
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="760,10,0,0" VerticalAlignment="Top" Width="30" Height="30" BorderBrush="{x:Null}" Click="btnRegresar_Click">
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="750,12,0,0" VerticalAlignment="Top" Width="40" Height="40" BorderBrush="{x:Null}" Click="btnRegresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/regreso.png"/>
             </Button.Background>

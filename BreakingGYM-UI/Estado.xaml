@@ -24,12 +24,12 @@
                 </TransformGroup>
             </DataGrid.RenderTransform>
         </DataGrid>
-        <Button x:Name="BtnModificar" Content="" HorizontalAlignment="Left" Margin="298,242,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="BtnModificar_Click" BorderBrush="{x:Null}">
+        <Button x:Name="BtnModificar" Content="" HorizontalAlignment="Left" Margin="298,242,0,0" VerticalAlignment="Top" Width="50" Height="50" Click="BtnModificar_Click" BorderBrush="{x:Null}" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="BtnEliminar" Content="" HorizontalAlignment="Left" Margin="178,242,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="BtnEliminar_Click" BorderBrush="{x:Null}">
+        <Button x:Name="BtnEliminar" Content="" HorizontalAlignment="Left" Margin="178,242,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="BtnEliminar_Click" BorderBrush="{x:Null}" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/eliminar (2).png"/>
             </Button.Background>
@@ -47,7 +47,7 @@
                 <ImageBrush ImageSource="/regreso.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="TxtId" HorizontalAlignment="Left" Margin="47,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38" TextChanged="TxtId_TextChanged"/>
+        <TextBox x:Name="TxtId" HorizontalAlignment="Left" Margin="47,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38" TextChanged="TxtId_TextChanged" Visibility="Collapsed"/>
 
     </Grid>
 </mah:MetroWindow>

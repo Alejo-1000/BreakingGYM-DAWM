@@ -398,15 +398,28 @@ namespace BreakingGymUI
         {
             if (!string.IsNullOrWhiteSpace(TxtId.Text))
             {
-                BtnEliminar.IsEnabled = true;   // habilitar botón eliminar
-                BtnModificar.IsEnabled = true;  // habilitar botón modificar
-
+                BtnEliminar.Visibility = Visibility.Visible;
+                BtnModificar.Visibility = Visibility.Visible;
             }
-
             else
             {
-                BtnEliminar.IsEnabled = false;
-                BtnModificar.IsEnabled = false;
+                BtnEliminar.Visibility = Visibility.Collapsed;
+                BtnModificar.Visibility = Visibility.Collapsed;
+            }
+        }
+
+        private void DataMembresia_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (DataMembresia.SelectedItem != null)
+            {
+                // Obtener el elemento seleccionado y asignar sus valores a los campos de texto
+                MembresiaEN Seleccionado = (MembresiaEN)DataMembresia.SelectedItem;
+                TxtId.Text = Seleccionado.Id.ToString();
+                txtNombre.Text = Seleccionado.Nombre;
+                txtDuracion.Text = Seleccionado.Duracion;
+                txtPrecio.Text = Seleccionado.Precio.ToString();
+                txtDescripcion.Text = Seleccionado.Descripcion;
+                CbxIdServicio.SelectedValue = Seleccionado.IdServicio; // Asignar el Id del servicio seleccionado
 
             }
         }

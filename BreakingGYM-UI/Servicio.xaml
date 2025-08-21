@@ -17,7 +17,7 @@
         <Label Content="Servicio" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="36"/>
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="67,110,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
         <Label Content="Descripcion" HorizontalAlignment="Left" Margin="39,174,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
-        <DataGrid x:Name="dgMostrarServicio" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="323,110,55,82"/>
+        <DataGrid x:Name="dgMostrarServicio" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="323,110,55,82" SelectionChanged="dgMostrarServicio_SelectionChanged"/>
         <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="49,262,0,0" VerticalAlignment="Top" Width="50" Height="50" BorderBrush="{x:Null}" Click="btnGuardar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/mas.png"/>

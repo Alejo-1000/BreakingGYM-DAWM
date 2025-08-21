@@ -202,18 +202,15 @@ namespace BreakingGymUI
 
         private void txtId_TextChanged(object sender, TextChangedEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(TxtId.Text))
+            if (!string.IsNullOrWhiteSpace(txtId.Text))
             {
-                BtnEliminar.IsEnabled = true;   // habilitar botón eliminar
-                BtnModificar.IsEnabled = true;  // habilitar botón modificar
-
+                BtnEliminar.Visibility = Visibility.Visible;
+                BtnModificar.Visibility = Visibility.Visible;
             }
-
             else
             {
-                BtnEliminar.IsEnabled = false;
-                BtnModificar.IsEnabled = false;
-
+                BtnEliminar.Visibility = Visibility.Collapsed;
+                BtnModificar.Visibility = Visibility.Collapsed;
             }
         }
     }

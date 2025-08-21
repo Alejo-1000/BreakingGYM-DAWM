@@ -27,6 +27,8 @@ namespace BreakingGymUI
     {
         ClienteBL _clienteBL = new ClienteBL();
         ClienteEN clienteEN = new ClienteEN();
+        private TipoDocumentoBL _Documento = new TipoDocumentoBL();
+        private RolBL _rolBL = new RolBL();
 
         public Cliente()
         {
@@ -193,23 +195,41 @@ namespace BreakingGymUI
                 TxtTarjetaRFID.Text = row["TarjetaRFID"].ToString();
 
             }
+            
         }
 
         private void txtId_TextChanged(object sender, TextChangedEventArgs e)
         {
+
             if (!string.IsNullOrWhiteSpace(TxtId.Text))
             {
-                btnEliminar.IsEnabled = true;   // habilitar botón eliminar
-                btnModificar.IsEnabled = true;  // habilitar botón modificar
-               
+                btnEliminar.Visibility = Visibility.Visible;
             }
-
             else
             {
-                btnEliminar.IsEnabled = false;
-                btnModificar.IsEnabled = false;
-
+                btnEliminar.Visibility = Visibility.Collapsed;
             }
+            if (!string.IsNullOrWhiteSpace(TxtId.Text))
+            {
+                btnModificar.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                btnModificar.Visibility = Visibility.Collapsed;
+            }
+
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            //Documentos
+            Cbxdocumento.ItemsSource = _Documento.MostrarTipoDocumento(); // Cargar estados desde el BL
+            Cbxdocumento.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario
+            Cbxdocumento.SelectedValuePath = "Id";
+            // Rol
+            CbxRol.ItemsSource = _rolBL.MostrarRol(); // Cargar roles desde el BL
+            CbxRol.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario
+            CbxRol.SelectedValuePath = "Id";
         }
     }
     
