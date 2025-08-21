@@ -32,12 +32,12 @@
                 <ImageBrush ImageSource="/mas.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="681,210,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnEliminar_Click">
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="681,210,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnEliminar_Click" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/eliminar (2).png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="681,297,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnModificar_Click">
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="681,297,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnModificar_Click" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
@@ -47,8 +47,12 @@
                 <ImageBrush ImageSource="/regreso.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="26,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" TextChanged="txtId_TextChanged"/>
-        <Button x:Name="btnLimpiar" Content="Button" HorizontalAlignment="Left" Margin="564,397,0,0" VerticalAlignment="Top" Click="btnLimpiar_Click"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="26,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" TextChanged="txtId_TextChanged" Visibility="Collapsed" VerticalScrollBarVisibility="Visible"/>
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Margin="622,337,0,0" VerticalAlignment="Top" Click="btnLimpiar_Click" BorderBrush="{x:Null}" Width="40" Height="40">
+            <Button.Background>
+                <ImageBrush ImageSource="/escoba.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </mah:MetroWindow>

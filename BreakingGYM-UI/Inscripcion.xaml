@@ -20,12 +20,12 @@
                 <ImageBrush ImageSource="/mas.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="BtnEliminar" Content="" HorizontalAlignment="Left" Height="48" Margin="698,354,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BtnEliminar_Click">
+        <Button x:Name="BtnEliminar" Content="" HorizontalAlignment="Left" Height="48" Margin="698,354,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="BtnEliminar_Click" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/eliminar (2).png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="BtnModificar" Content="" HorizontalAlignment="Left" Height="48" Margin="562,354,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="BtnModificar_Click">
+        <Button x:Name="BtnModificar" Content="" HorizontalAlignment="Left" Height="48" Margin="562,354,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="BtnModificar_Click" ScrollViewer.HorizontalScrollBarVisibility="Visible" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
@@ -63,9 +63,14 @@
                 <ImageBrush ImageSource="/buscar.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="13" Margin="29,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" TextChanged="txtId_TextChanged"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="13" Margin="29,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" TextChanged="txtId_TextChanged" VerticalScrollBarVisibility="Visible" Visibility="Collapsed"/>
         <ComboBox x:Name="cbCliente" HorizontalAlignment="Left" Height="13" Margin="508,73,0,0" VerticalAlignment="Top" Width="240"/>
         <ComboBox x:Name="cbMembresia" HorizontalAlignment="Left" Height="26" Margin="508,129,0,0" VerticalAlignment="Top" Width="240"/>
         <ComboBox x:Name="cbEstado" HorizontalAlignment="Left" Height="24" Margin="508,186,0,0" VerticalAlignment="Top" Width="240"/>
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Height="40" Margin="363,368,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/escoba.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </mah:MetroWindow>

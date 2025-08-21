@@ -20,12 +20,12 @@
                 <ImageBrush ImageSource="/mas.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Height="50" Margin="708,252,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="btnEliminar_Click">
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Height="50" Margin="708,252,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="btnEliminar_Click" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/eliminar (2).png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Height="50" Margin="708,344,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="btnModificar_Click">
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Height="50" Margin="708,344,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="btnModificar_Click" Visibility="Collapsed">
             <Button.Background>
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
@@ -38,8 +38,12 @@
         </Button>
         <Label Content="Tipo de documento" HorizontalAlignment="Left" Height="40" Margin="136,98,0,0" VerticalAlignment="Top" Width="157" FontFamily="Arial Rounded MT Bold" Foreground="White" FontSize="14"/>
         <Label Content="Documentos" HorizontalAlignment="Center" Height="47" VerticalAlignment="Top" Width="236" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="36"/>
-        <Button x:Name="btnLimpiar" Content="Button" HorizontalAlignment="Left" Margin="597,388,0,20"/>
-        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="19,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" TextChanged="txtId_TextChanged"/>
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Margin="657,329,0,65" Width="40" Height="40" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/escoba.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="19,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" TextChanged="txtId_TextChanged" Visibility="Collapsed"/>
 
     </Grid>
 </mah:MetroWindow>
