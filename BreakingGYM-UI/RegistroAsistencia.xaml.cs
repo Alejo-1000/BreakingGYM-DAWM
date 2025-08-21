@@ -22,10 +22,21 @@ namespace BreakingGymUI
             InitializeComponent();
             CargarAsistencia();
 
-            // ⚠️ Ajusta el COM según tu Arduino
             _puerto = new SerialPort("COM3", 9600);
             _puerto.DataReceived += Puerto_DataReceived;
-            _puerto.Open();
+
+            try
+            {
+                if (!_puerto.IsOpen)
+                    _puerto.Open();
+            }
+            catch (Exception ex)
+            {
+                // No bloquea el inicio, solo informa
+                MessageBox.Show("No se pudo abrir el puerto COM. El Arduino no está conectado.\n\n" +
+                                "Detalles: " + ex.Message,
+                                "Aviso", MessageBoxButton.OK, MessageBoxImage.Warning);
+            }
         }
 
         public void CargarAsistencia()
