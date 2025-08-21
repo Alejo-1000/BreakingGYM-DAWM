@@ -23,6 +23,7 @@ namespace BreakingGymUI
     public partial class Usuario : MetroWindow
     {
         UsuarioBL _usuarioBL = new UsuarioBL();
+        private RolBL _rolBL = new RolBL(); // Para cargar los roles
         public Usuario()
         {
             InitializeComponent();
@@ -199,6 +200,13 @@ namespace BreakingGymUI
         private void btnRegresar_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            cbxIdRol.ItemsSource = _rolBL.  MostrarRol(); // Cargar estados desde el BL
+            cbxIdRol.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario
+            cbxIdRol.SelectedValuePath = "Id";
         }
     }
 }

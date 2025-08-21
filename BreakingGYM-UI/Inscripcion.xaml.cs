@@ -24,6 +24,9 @@ namespace BreakingGymUI
     {
         InscripcionBL _mostrarInscripcion = new InscripcionBL();
         InscripcionEN _inscripcionEN = new InscripcionEN();
+        private ClienteBL _clienteBL = new ClienteBL();
+        private MembresiaBL _membresiaBL = new MembresiaBL();
+        private EstadoBL _estadoBL = new EstadoBL();
         public Inscripcion()
         {
             InitializeComponent();
@@ -179,6 +182,22 @@ namespace BreakingGymUI
                     dpVencimiento.SelectedDate = inscripcion.FechaVencimiento;
                 }
             }
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            //Cliente
+            cbCliente.ItemsSource = _clienteBL.MostrarCliente(); // Cargar clientes desde el BL
+            cbCliente.DisplayMemberPath = "Documento";   // lo que se muestra al usuario
+            cbCliente.SelectedValuePath = "Id";
+            // Membresía
+            cbMembresia.ItemsSource = _membresiaBL.MostrarMembresia(); // Cargar clientes desde el BL
+            cbMembresia.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario
+            cbMembresia.SelectedValuePath = "Id";
+            // Estado
+            cbEstado.ItemsSource = _estadoBL.MostrarEstado(); // Cargar estados desde el BL
+            cbEstado.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario
+            cbEstado.SelectedValuePath = "Id";
         }
     }
 }

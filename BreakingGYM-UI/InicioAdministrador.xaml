@@ -86,7 +86,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-
-
+       
     </Grid>
 </mah:MetroWindow>

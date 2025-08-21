@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:BreakingGymUI"
         mc:Ignorable="d"
         Title="Usuario" Height="450" Width="800">
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="1"/>

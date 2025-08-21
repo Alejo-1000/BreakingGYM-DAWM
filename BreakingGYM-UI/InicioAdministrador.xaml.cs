@@ -29,7 +29,7 @@ namespace BreakingGymUI
         private void BtnInscripcion_Click(object sender, RoutedEventArgs e)
         {
             Inscripcion Inscripcion = new Inscripcion();// instacia 
-            Inscripcion.Show();
+            Inscripcion.Show();// muestra la ventana de Inscripcion
         }
 
         private void btnAsistencia_Click(object sender, RoutedEventArgs e)

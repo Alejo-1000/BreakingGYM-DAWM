@@ -50,7 +50,7 @@
         <ComboBox x:Name="CbxRol" HorizontalAlignment="Left" Height="26" Margin="117,154,0,0" VerticalAlignment="Top" Width="150"/>
         <ComboBox x:Name="Cbxdocumento" HorizontalAlignment="Left" Height="26" Margin="438,109,0,0" VerticalAlignment="Top" Width="158"/>
         <TextBox x:Name="TxtId" HorizontalAlignment="Left" Height="26" Margin="46,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="32" TextChanged="txtId_TextChanged"/>
-        <TextBox x:Name="TxtTarjetaRFID" HorizontalAlignment="Left" Margin="438,177,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="TxtTarjetaRFID" HorizontalAlignment="Left" Margin="670,96,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </mah:MetroWindow>

@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:BreakingGymUI"
         mc:Ignorable="d"
         Title="Inscripcion" Height="450" Width="800">
-    <Grid>
+    <Grid Loaded="Grid_Loaded">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="Black" Offset="1"/>
@@ -35,9 +35,6 @@
         <Label Content="Inscripciones" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontSize="30"/>
         <Label Content="Cliente" HorizontalAlignment="Left" Margin="431,73,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.315,-0.191" FontFamily="Arial Rounded MT Bold" FontSize="14" Foreground="#FFFDFBFB"/>
         <Label Content="Membresia" HorizontalAlignment="Left" Margin="406,129,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="14" Foreground="#FFFDFBFB"/>
-        <ListBox x:Name="cbCliente" HorizontalAlignment="Left" Height="26" Margin="508,73,0,0" VerticalAlignment="Top" Width="240" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <ListBox x:Name="cbMembresia" HorizontalAlignment="Left" Height="28" Margin="508,128,0,0" VerticalAlignment="Top" Width="240" d:ItemsSource="{d:SampleData ItemCount=5}"/>
-        <ListBox x:Name="cbEstado" HorizontalAlignment="Left" Height="28" Margin="508,186,0,0" VerticalAlignment="Top" Width="240" d:ItemsSource="{d:SampleData ItemCount=5}"/>
         <DatePicker x:Name="dpInicio" HorizontalAlignment="Left" Height="28" Margin="540,243,0,0" VerticalAlignment="Top" Width="208"/>
         <DatePicker x:Name="dpVencimiento" HorizontalAlignment="Left" Height="28" Margin="540,300,0,0" VerticalAlignment="Top" Width="208" mah:DatePickerHelper.DropDownButtonFontSize="7" mah:ValidationHelper.ShowValidationErrorOnMouseOver="True"/>
         <TextBox x:Name="txtBuscar" HorizontalAlignment="Left" Height="26" Margin="72,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="219"/>
@@ -67,5 +64,8 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="13" Margin="29,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47"/>
+        <ComboBox x:Name="cbCliente" HorizontalAlignment="Left" Height="13" Margin="508,73,0,0" VerticalAlignment="Top" Width="240"/>
+        <ComboBox x:Name="cbMembresia" HorizontalAlignment="Left" Height="26" Margin="508,129,0,0" VerticalAlignment="Top" Width="240"/>
+        <ComboBox x:Name="cbEstado" HorizontalAlignment="Left" Height="24" Margin="508,186,0,0" VerticalAlignment="Top" Width="240"/>
     </Grid>
 </mah:MetroWindow>

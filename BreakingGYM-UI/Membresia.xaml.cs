@@ -29,6 +29,7 @@ namespace BreakingGymUI
         MembresiaBL _mostrarMembresia = new MembresiaBL();
         public MembresiaEN membresiaParaImprimir;
         MembresiaBL _membresiaBL = new MembresiaBL();
+        private ServicioBL _servicioBL = new ServicioBL();
         public Membresia()
         {
             InitializeComponent();
@@ -379,6 +380,18 @@ namespace BreakingGymUI
 
             // 6️⃣ Limpiar la variable de membresía para imprimir
             membresiaParaImprimir = null;
+        }
+
+        private void CbxIdServicio_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            CbxIdServicio.ItemsSource = _servicioBL.MostrarServicio();
+            CbxIdServicio.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario
+            CbxIdServicio.SelectedValuePath = "Id";       // lo que se usa internamente
         }
     }
 }
