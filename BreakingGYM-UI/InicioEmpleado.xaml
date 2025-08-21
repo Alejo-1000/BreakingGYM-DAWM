@@ -1,8 +1,9 @@
-﻿<Window x:Class="BreakingGymUI.InicioEmpleado"
+﻿<mah:MetroWindow x:Class="BreakingGymUI.InicioEmpleado"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:local="clr-namespace:BreakingGymUI"
         mc:Ignorable="d"
         Title="InicioEmpleado" Height="450" Width="800">
@@ -50,4 +51,4 @@
         <Label Content="¡Bienvenido a Inicio!" HorizontalAlignment="Center" Height="63" VerticalAlignment="Top" Width="402" FontFamily="Times New Roman" FontSize="45" Margin="0,91,0,0"/>
         <Image Source="/0a5bcaaf-ccf2-49de-9d75-1f233391d1de.png" Margin="317,149,317,95"/>
     </Grid>
-</Window>
+</mah:MetroWindow>

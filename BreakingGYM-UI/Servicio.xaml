@@ -1,0 +1,47 @@
+﻿<mah:MetroWindow x:Class="BreakingGymUI.Servicio"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:BreakingGymUI"
+        mc:Ignorable="d"
+        Title="Servicio" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF28628C" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Label Content="Servicio" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="36"/>
+        <Label Content="Nombre" HorizontalAlignment="Left" Margin="67,110,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
+        <Label Content="Descripcion" HorizontalAlignment="Left" Margin="39,174,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
+        <DataGrid x:Name="dgMostrarServicio" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="323,110,55,82"/>
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="49,262,0,0" VerticalAlignment="Top" Width="50" Height="50" BorderBrush="{x:Null}" Click="btnGuardar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/mas.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="140,262,0,0" VerticalAlignment="Top" Width="50" Height="50" BorderBrush="{x:Null}" Click="btnEliminar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/eliminar (2).png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="231,262,0,0" VerticalAlignment="Top" Width="50" Height="50" BorderBrush="{x:Null}" Click="btnModificar_Click" >
+            <Button.Background>
+                <ImageBrush ImageSource="/editar-texto.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="BntCerrar" Content="" HorizontalAlignment="Left" Margin="760,10,0,0" VerticalAlignment="Top" Width="30" Height="30" BorderBrush="{x:Null}">
+            <Button.Background>
+                <ImageBrush ImageSource="/regreso.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="137,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
+        <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="136,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="25,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextChanged="txtId_TextChanged"/>
+        <Button x:Name="btnLimpiar" Content="Button" HorizontalAlignment="Left" Margin="692,374,0,0" VerticalAlignment="Top"/>
+
+    </Grid>
+</mah:MetroWindow>
