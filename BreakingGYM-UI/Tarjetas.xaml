@@ -1,0 +1,58 @@
+﻿<mah:MetroWindow x:Class="BreakingGymUI.Tarjetas"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:BreakingGymUI"
+        mc:Ignorable="d"
+        Title="Rol" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="1"/>
+                <GradientStop Color="#FF28628C" Offset="0"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <DataGrid x:Name="dgMostrarTarjeta" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="63,129,183,57" SelectionChanged="dgMostrarTarjeta_SelectionChanged"/>
+        <Label Content="Tarjetas" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial Rounded MT Bold"/>
+        <TextBox x:Name="txtNumero" HorizontalAlignment="Left" Margin="182,83,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="405"/>
+        <Label Content="NumeroRFID" HorizontalAlignment="Left" Margin="63,83,0,0" VerticalAlignment="Top" FontFamily="Arial Rounded MT Bold" FontSize="14" Foreground="White"/>
+        <Button x:Name="btnGuardar" Content="" HorizontalAlignment="Left" Margin="682,121,0,0" VerticalAlignment="Top" Height="50" Width="50" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Click="btnGuardar_Click">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="1.083"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+            <Button.Background>
+                <ImageBrush ImageSource="/mas.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnEliminar" Content="" HorizontalAlignment="Left" Margin="681,210,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnEliminar_Click" Visibility="Collapsed">
+            <Button.Background>
+                <ImageBrush ImageSource="/eliminar (2).png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnModificar" Content="" HorizontalAlignment="Left" Margin="681,297,0,0" VerticalAlignment="Top" Height="50" Width="50" BorderBrush="{x:Null}" Click="btnModificar_Click" Visibility="Collapsed">
+            <Button.Background>
+                <ImageBrush ImageSource="/editar-texto.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="750,12,0,0" VerticalAlignment="Top" Width="40" Height="40" BorderBrush="{x:Null}" >
+            <Button.Background>
+                <ImageBrush ImageSource="/regreso.png"/>
+            </Button.Background>
+        </Button>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="26,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="59" Visibility="Collapsed" VerticalScrollBarVisibility="Visible"/>
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Margin="622,337,0,0" VerticalAlignment="Top" Click="btnLimpiar_Click" BorderBrush="{x:Null}" Width="40" Height="40">
+            <Button.Background>
+                <ImageBrush ImageSource="/escoba.png"/>
+            </Button.Background>
+        </Button>
+
+    </Grid>
+</mah:MetroWindow>

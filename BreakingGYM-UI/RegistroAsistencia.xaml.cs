@@ -52,15 +52,54 @@ namespace BreakingGymUI
 
         private void BtnBuscar_Click(object sender, RoutedEventArgs e)
         {
-            if (DtBuscar.SelectedDate.HasValue)
+            if (CbTarjetas.SelectedItem != null)
             {
-                DateTime fechaAsistencia = DtBuscar.SelectedDate.Value;
-                List<RegistroAsistenciaEN> lista = _asistenciaBL.BuscarAsistencia(fechaAsistencia);
-                DgAsistencia.ItemsSource = lista;
+                string numeroRFID = CbTarjetas.SelectedItem.ToString();
+
+                try
+                {
+                    using (SqlConnection conn = (SqlConnection)ComunBD.ObtenerConexion(ComunBD.TipoBD.SqlServer))
+                    {
+                        if (conn.State != ConnectionState.Open)
+                            conn.Open();
+
+                        using (SqlCommand cmd = new SqlCommand("MostrarAsistenciaPorRFID", conn))
+                        {
+                            cmd.CommandType = CommandType.StoredProcedure;
+                            cmd.Parameters.AddWithValue("@NumeroRFID", numeroRFID);
+
+                            using (SqlDataReader dr = cmd.ExecuteReader())
+                            {
+                                List<RegistroAsistenciaEN> lista = new List<RegistroAsistenciaEN>();
+
+                                while (dr.Read())
+                                {
+                                    lista.Add(new RegistroAsistenciaEN
+                                    {
+                                        Id = Convert.ToInt32(dr["Id"]),
+                                        IdCliente = Convert.ToInt32(dr["IdCliente"]),
+                                        NombreCliente = dr["NombreCliente"].ToString(),
+                                        ApellidoCliente = dr["ApellidoCliente"].ToString(),
+                                        DocumentoCliente = dr["DocumentoCliente"].ToString(),
+                                        NumeroRFID = dr["NumeroRFID"].ToString(),
+                                        FechaAsistencia = Convert.ToDateTime(dr["FechaAsistencia"]),
+                                        HoraAsistencia = TimeSpan.Parse(dr["HoraAsistencia"].ToString())
+                                    });
+                                }
+
+                                DgAsistencia.ItemsSource = lista;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al buscar asistencia: " + ex.Message);
+                }
             }
             else
             {
-                MessageBox.Show("Seleccione una fecha para buscar.");
+                MessageBox.Show("Seleccione una tarjeta RFID.");
             }
         }
 

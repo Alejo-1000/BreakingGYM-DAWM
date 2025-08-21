@@ -10,17 +10,17 @@ namespace BreakinGymBL
 {
     public class RegistroAsistenciaBL
     {
-        public List<RegistroAsistenciaEN> MostrarAsistencia()
+        private RegistroAsistenciaDAL dal = new RegistroAsistenciaDAL();
+
+        public List<RegistroAsistenciaEN> MostrarAsistencia(DateTime? fechaDesde = null, DateTime? fechaHasta = null)
         {
-            return RegistroAsistenciaDAL.MostrarAsistencia();
+            return dal.MostrarAsistencia(fechaDesde, fechaHasta);
         }
-        public List<RegistroAsistenciaEN> BuscarAsistencia(DateTime fechaAsistencia)
+
+        public void RegistrarAsistenciaPorRFID(string numeroRFID)
         {
-            return RegistroAsistenciaDAL.BuscarAsistencia(fechaAsistencia);
+            dal.RegistrarAsistenciaPorRFID(numeroRFID);
         }
-        public int RegistrarAsistenciaPorTarjeta(string tarjetaRFID)
-        {
-            return RegistroAsistenciaDAL.RegistrarAsistenciaPorTarjeta(tarjetaRFID);
-        }
+
     }
 }

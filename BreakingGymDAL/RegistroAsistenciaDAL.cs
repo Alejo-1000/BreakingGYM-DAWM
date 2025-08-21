@@ -12,73 +12,68 @@ namespace BreakingGymDAL
 {
     public class RegistroAsistenciaDAL
     {
-        public static List<RegistroAsistenciaEN> MostrarAsistencia()
+        public List<RegistroAsistenciaEN> MostrarAsistencia(DateTime? fechaDesde = null, DateTime? fechaHasta = null)
         {
-            List<RegistroAsistenciaEN> _Lista = new List<RegistroAsistenciaEN>();
-            using (IDbConnection _conn = ComunBD.ObtenerConexion(ComunBD.TipoBD.SqlServer))
-            {
-                _conn.Open();
-                SqlCommand _comando = new SqlCommand("MostrarAsistenciasConCliente", _conn as SqlConnection);
-                _comando.CommandType = CommandType.StoredProcedure;
-                IDataReader _reader = _comando.ExecuteReader();
-                while (_reader.Read())
-                {
-                    _Lista.Add(new RegistroAsistenciaEN
-                    {
-                        Id = _reader.GetInt32(0),
-                        IdCliente = _reader.GetInt32(1),
-                        Nombre = _reader.GetString(2),
-                        Apellido = _reader.GetString(3),
-                        TarjetaRFID = _reader.GetString(4),
-                        FechaAsistencia = _reader.GetDateTime(5),
-                        HoraEntrada = (TimeSpan)_reader.GetValue(6)  // ← cambio aquí
-                    });
-                }
-                _conn.Close();
-            }
-            return _Lista;
-        }
-        public static List<RegistroAsistenciaEN> BuscarAsistencia(DateTime fechaAsistencia)
-        {
-            List<RegistroAsistenciaEN> _Lista = new List<RegistroAsistenciaEN>();
-            using (IDbConnection _conn = ComunBD.ObtenerConexion(ComunBD.TipoBD.SqlServer))
-            {
-                _conn.Open();
-                SqlCommand _comando = new SqlCommand("BuscarAsistencia", _conn as SqlConnection);
-                _comando.CommandType = CommandType.StoredProcedure;
+            List<RegistroAsistenciaEN> lista = new List<RegistroAsistenciaEN>();
 
-                // ✅ Ahora el parámetro se pasa como DateTime
-                _comando.Parameters.Add(new SqlParameter("@fechaAsistencia", fechaAsistencia));
-
-                IDataReader _reader = _comando.ExecuteReader();
-                while (_reader.Read())
-                {
-                    _Lista.Add(new RegistroAsistenciaEN
-                    {
-                        Id = _reader.GetInt32(0),
-                        IdCliente = _reader.GetInt32(1),
-                        Nombre = _reader.GetString(2),
-                        Apellido = _reader.GetString(3),
-                        TarjetaRFID = _reader.GetString(4),
-                        FechaAsistencia = _reader.GetDateTime(5),
-                        HoraEntrada = (TimeSpan)_reader.GetValue(6)
-                    });
-                }
-                _conn.Close();
-            }
-            return _Lista;
-        }
-        public static int RegistrarAsistenciaPorTarjeta(string tarjetaRFID)
-        {
-            using (IDbConnection _conn = ComunBD.ObtenerConexion(ComunBD.TipoBD.SqlServer))
+            using (IDbConnection con = ComunBD.ObtenerConexion(ComunBD.TipoBD.SqlServer))
             {
-                _conn.Open();
-                SqlCommand _comando = new SqlCommand("RegistrarAsistenciaPorTarjeta", _conn as SqlConnection);
-                _comando.CommandType = CommandType.StoredProcedure;
-                _comando.Parameters.Add(new SqlParameter("@TarjetaRFID", tarjetaRFID));
-                int resultado = _comando.ExecuteNonQuery();
-                _conn.Close();
-                return resultado;
+                using (IDbCommand cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "MostrarAsistencia";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    var paramDesde = cmd.CreateParameter();
+                    paramDesde.ParameterName = "@FechaDesde";
+                    paramDesde.Value = (object)fechaDesde ?? DBNull.Value;
+                    cmd.Parameters.Add(paramDesde);
+
+                    var paramHasta = cmd.CreateParameter();
+                    paramHasta.ParameterName = "@FechaHasta";
+                    paramHasta.Value = (object)fechaHasta ?? DBNull.Value;
+                    cmd.Parameters.Add(paramHasta);
+
+                    con.Open();
+                    using (IDataReader dr = cmd.ExecuteReader())
+                    {
+                        while (dr.Read())
+                        {
+                            lista.Add(new RegistroAsistenciaEN
+                            {
+                                Id = Convert.ToInt32(dr["Id"]),
+                                IdCliente = Convert.ToInt32(dr["IdCliente"]),
+                                NombreCliente = dr["NombreCliente"].ToString(),
+                                ApellidoCliente = dr["ApellidoCliente"].ToString(),
+                                DocumentoCliente = dr["DocumentoCliente"].ToString(),
+                                NumeroRFID = dr["NumeroRFID"].ToString(),
+                                FechaAsistencia = Convert.ToDateTime(dr["FechaAsistencia"]),
+                                HoraAsistencia = (TimeSpan)dr["HoraAsistencia"]
+                            });
+                        }
+                    }
+                }
+            }
+
+            return lista;
+        }
+
+        public void RegistrarAsistenciaPorRFID(string numeroRFID)
+        {
+            using (IDbConnection con = ComunBD.ObtenerConexion(ComunBD.TipoBD.SqlServer))
+            {
+                using (IDbCommand cmd = con.CreateCommand())
+                {
+                    cmd.CommandText = "RegistrarAsistenciaPorRFID";
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    var param = cmd.CreateParameter();
+                    param.ParameterName = "@NumeroRFID";
+                    param.Value = numeroRFID;
+                    cmd.Parameters.Add(param);
+
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
         }
     }

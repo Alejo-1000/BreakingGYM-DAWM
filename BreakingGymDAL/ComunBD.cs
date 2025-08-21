@@ -18,7 +18,7 @@ namespace BreakingGymDAL
         {
             SqlServer, Oracle, DB2
         }
-        public const string Sqlconn = @"Data Source=.\;Initial Catalog=BreakingGymADWA;Integrated Security=True;TrustServerCertificate=True";
+        public const string Sqlconn = @"Data Source=.\;Initial Catalog=BreakingGymADWA5;Integrated Security=True;TrustServerCertificate=True";
         public static IDbConnection ObtenerConexion(TipoBD pTipoBD)
         {
             IDbConnection _conn;

@@ -6,18 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace BreakingGymEN
-{ 
-        public class ClienteEN : Persona
+{
+    public class ClienteEN : Persona
+    {
+        public int IdTarjetaRFID { get; set; }
+
+        public ClienteEN() : base() { }
+
+        public ClienteEN(int Id, int IdRol, int IdTarjetaRFID, int IdTipoDocumento, string Documento, string Nombre, string Apellido, string Celular)
+            : base(Id, IdRol, IdTipoDocumento, Documento, Nombre, Apellido, Celular)
         {
-        public string TarjetaRFID { get; set; }
-        public ClienteEN() : base()
-        {
-            this.TarjetaRFID = TarjetaRFID;
+            this.IdTarjetaRFID = IdTarjetaRFID;
         }
-        public ClienteEN(int Id, int IdRol, int IdTipoDocumento, string Documento, string Nombre, string Apelllido, string Celular,string TarjetaRFID) : base(Id, IdRol, IdTipoDocumento, Documento, Nombre, Apelllido, Celular)
-            {
-                this.TarjetaRFID = TarjetaRFID;
-        }
-            
-        }
+
+    }     
 }

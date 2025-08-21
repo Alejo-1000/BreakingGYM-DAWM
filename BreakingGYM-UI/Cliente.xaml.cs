@@ -46,19 +46,22 @@ namespace BreakingGymUI
             {
                 IdRol = Convert.ToByte(CbxRol.SelectedValue),
                 IdTipoDocumento = Convert.ToByte(Cbxdocumento.SelectedValue),
+                IdTarjetaRFID=Convert.ToByte(CbNumeroRFID.SelectedValue),
                 Documento = TxtDocumento.Text.Trim(),
                 Nombre = TxtNombre.Text.Trim(),
                 Apellido = TxtApellido.Text.Trim(),
                 Celular = TxtCelular.Text.Trim(),
-                TarjetaRFID = TxtTarjetaRFID.Text.Trim() // Asignar un valor por defecto o dejarlo vacío si no es necesario
+
             };
 
             // Validar campos obligatorios
             if (cliente.IdRol <= 0 || cliente.IdTipoDocumento <= 0 ||
+                cliente.IdTarjetaRFID <=0
+                ||
                 string.IsNullOrEmpty(cliente.Documento) ||
                 string.IsNullOrEmpty(cliente.Nombre) ||
                 string.IsNullOrEmpty(cliente.Apellido) ||
-               string .IsNullOrEmpty(cliente.TarjetaRFID) ||
+              
                 string.IsNullOrEmpty(cliente.Celular))
             {
                 MessageBox.Show("Por favor, complete todos los campos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
@@ -143,15 +146,16 @@ namespace BreakingGymUI
             {
                 Id = Convert.ToByte(TxtId.Text),
                 IdRol = Convert.ToByte(CbxRol.SelectedValue),
+                IdTarjetaRFID=Convert.ToByte(CbNumeroRFID.SelectedValue),
                 IdTipoDocumento = Convert.ToByte(Cbxdocumento.SelectedValue),
                 Documento = TxtDocumento.Text.Trim(),
                 Nombre = TxtNombre.Text,
                 Apellido = TxtApellido.Text,
                 Celular = TxtCelular.Text,
-                TarjetaRFID = TxtTarjetaRFID.Text.Trim() // Asignar un valor por defecto o dejarlo vacío si no es necesario
+               
 
             };
-            if (string.IsNullOrEmpty(cliente.Nombre) || string.IsNullOrEmpty(cliente.Apellido) || string.IsNullOrEmpty(cliente.Celular) || cliente.IdRol <= 0 || cliente.IdTipoDocumento <= 0 ||string.IsNullOrEmpty(cliente.TarjetaRFID) || string.IsNullOrEmpty(cliente.Documento))
+            if (string.IsNullOrEmpty(cliente.Nombre) || string.IsNullOrEmpty(cliente.Apellido) || string.IsNullOrEmpty(cliente.Celular) || cliente.IdRol <= 0 || cliente.IdTipoDocumento <= 0||cliente.IdTarjetaRFID<=0  || string.IsNullOrEmpty(cliente.Documento))
             {
                 MessageBox.Show("Por favor, Complete todos los campos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -168,10 +172,11 @@ namespace BreakingGymUI
                 _clienteBL.ModificarCliente(cliente);
                 TxtNombre.Clear();
                 TxtCelular.Clear();
+                CbNumeroRFID.Items.Clear();
                 TxtApellido.Clear();
                 TxtId.Clear();
                 TxtDocumento.Clear();
-                TxtTarjetaRFID.Clear();
+               
                 CargarGrid();
                 MessageBox.Show(" Cliente modificado correctamente.", "Éxito", MessageBoxButton.OK, MessageBoxImage.Information);
 
@@ -187,12 +192,13 @@ namespace BreakingGymUI
 
                 TxtId.Text = row["Id"].ToString();
                 CbxRol.Text = row["IdRol"].ToString();
+                CbNumeroRFID.Text = row["IdTarjetaRFID"].ToString();
                 Cbxdocumento.Text = row["IdTipoDocumento"].ToString();
                 TxtNombre.Text = row["Nombre"].ToString();
                 TxtApellido.Text = row["Apellido"].ToString();
                 TxtCelular.Text = row["Celular"].ToString();
                 TxtDocumento.Text = row["Documento"].ToString();
-                TxtTarjetaRFID.Text = row["TarjetaRFID"].ToString();
+               
 
             }
             
@@ -237,6 +243,7 @@ namespace BreakingGymUI
             TxtId.Text = string.Empty;
             TxtNombre.Text = string.Empty;
             TxtApellido.Text = string.Empty;
+            CbNumeroRFID.Text = string.Empty;
             CbxRol.Text = string.Empty;
             TxtCelular.Text = string.Empty;
             Cbxdocumento.Text = string.Empty;
