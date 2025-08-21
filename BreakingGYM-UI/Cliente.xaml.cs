@@ -250,6 +250,11 @@ namespace BreakingGymUI
             TxtDocumento.Text = string.Empty;
 
         }
+
+        private void btnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
     
 }
