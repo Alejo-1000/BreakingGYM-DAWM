@@ -200,5 +200,10 @@ namespace BreakingGymUI
             txtDescripcion.Text = string.Empty;
            
         }
+
+        private void BntCerrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

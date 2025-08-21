@@ -114,5 +114,10 @@ namespace BreakingGymUI
                 txtNumero.Text = selected.Numerorfid;
             }
         }
+
+        private void btnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

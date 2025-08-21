@@ -13,8 +13,8 @@ namespace BreakingGymEN
         public UsuarioEN() : base()
         {
         }
-        public UsuarioEN(int Id, int IdRol, int IdTipoDocumento, string Documento, string Nombre, string Apellido, string Celular, string Cuenta, string Contrasenia) 
-            : base(Id, IdRol, IdTipoDocumento, Documento, Nombre, Apellido, Celular)
+        public UsuarioEN(int Id, int IdRol, string Nombre, string Apellido, string Celular, string Cuenta, string Contrasenia) 
+            : base(Id, IdRol, Nombre, Apellido, Celular)
         {
             this.Cuenta = Cuenta;
             this.Contrasenia = Contrasenia;

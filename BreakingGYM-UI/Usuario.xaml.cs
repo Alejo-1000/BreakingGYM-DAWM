@@ -234,5 +234,18 @@ namespace BreakingGymUI
             txtContrasenia.Text = string.Empty;
             txtBuscarUsuario.Text = string.Empty;
         }
+
+        private void btnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            string nombre = txtBuscarUsuario.Text;
+            List<UsuarioEN> usuarios = UsuarioBL.BuscarUsuario(nombre);
+            dgMostrarUsuario.ItemsSource = usuarios;
+        }
+
+        private void btnRefrescar_Click(object sender, RoutedEventArgs e)
+        {
+            txtBuscarUsuario.Text = string.Empty; 
+            CargarGrid();
+        }
     }
 }

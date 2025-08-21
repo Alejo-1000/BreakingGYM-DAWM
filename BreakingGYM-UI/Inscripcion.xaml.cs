@@ -224,5 +224,28 @@ namespace BreakingGymUI
             dpVencimiento.Text = string.Empty;
             txtBuscar.Text = string.Empty;
         }
+
+        private void BtnRefrescar_Click(object sender, RoutedEventArgs e)
+        {
+            CargarGrid();
+            txtBuscar.Text = string.Empty;
+        }
+
+        private void BtnBuscar_Click(object sender, RoutedEventArgs e)
+        {
+            string idCliente = txtBuscar.Text;
+            List<InscripcionEN> inscripciones = InscripcionBL.BuscarInscripcion(idCliente);
+            dgInscripcion.ItemsSource = inscripciones;
+        }
+
+        private void cbMembresia_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void cbEstado_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

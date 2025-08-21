@@ -11,7 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BreakingGymEN;
 using MahApps.Metro.Controls;
+using BreakinGymBL;
 
 namespace BreakingGymUI
 {
@@ -20,9 +22,22 @@ namespace BreakingGymUI
     /// </summary>
     public partial class ReporteMembresia : MetroWindow
     {
+        private InscripcionBL _mostrarInscripcion = new InscripcionBL();
         public ReporteMembresia()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+      
+
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            dtMostrar.ItemsSource = _mostrarInscripcion.MostrarInscripcion(); // Cargar clientes desde el BL
         }
     }
 }

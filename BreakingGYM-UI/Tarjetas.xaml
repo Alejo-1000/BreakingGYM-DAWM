@@ -42,7 +42,7 @@
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="750,12,0,0" VerticalAlignment="Top" Width="40" Height="40" BorderBrush="{x:Null}" >
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="750,12,0,0" VerticalAlignment="Top" Width="40" Height="40" BorderBrush="{x:Null}" Click="btnRegresar_Click" >
             <Button.Background>
                 <ImageBrush ImageSource="/regreso.png"/>
             </Button.Background>

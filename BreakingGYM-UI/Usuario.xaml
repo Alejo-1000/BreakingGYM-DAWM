@@ -29,7 +29,7 @@
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="49,112,0,0" VerticalAlignment="Top" Height="25" Width="25" RenderTransformOrigin="1.221,-0.078" BorderBrush="{x:Null}">
+        <Button x:Name="btnBuscar" Content="" HorizontalAlignment="Left" Margin="49,112,0,0" VerticalAlignment="Top" Height="25" Width="25" RenderTransformOrigin="1.221,-0.078" BorderBrush="{x:Null}" Click="btnBuscar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/buscar.png"/>
             </Button.Background>
@@ -39,7 +39,7 @@
                 <ImageBrush ImageSource="/regreso.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="btnRefrescar" Content="" HorizontalAlignment="Center" Margin="0,114,0,0" VerticalAlignment="Top" Height="25" Width="24" RenderTransformOrigin="0.506,0.547" BorderBrush="{x:Null}">
+        <Button x:Name="btnRefrescar" Content="" HorizontalAlignment="Center" Margin="0,114,0,0" VerticalAlignment="Top" Height="25" Width="24" RenderTransformOrigin="0.506,0.547" BorderBrush="{x:Null}" Click="btnRefrescar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/actualizar.png"/>
             </Button.Background>

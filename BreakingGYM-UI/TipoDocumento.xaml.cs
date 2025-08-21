@@ -189,5 +189,10 @@ namespace BreakingGymUI
             TxtNombre.Text = string.Empty;
             
         }
+
+        private void BtnRegresar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

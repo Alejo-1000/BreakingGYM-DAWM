@@ -50,7 +50,7 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <Button x:Name="BtnRefrescar" Content="" HorizontalAlignment="Left" Height="25" Margin="29,86,0,0" VerticalAlignment="Top" Width="25">
+        <Button x:Name="BtnRefrescar" Content="" HorizontalAlignment="Left" Height="25" Margin="29,86,0,0" VerticalAlignment="Top" Width="25" Click="BtnRefrescar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/actualizar.png"/>
             </Button.Background>
@@ -58,15 +58,15 @@
                 <ImageBrush ImageSource="/actualizar.png"/>
             </Button.BorderBrush>
         </Button>
-        <Button x:Name="BtnBuscar" Content="" HorizontalAlignment="Left" Height="25" Margin="310,87,0,0" VerticalAlignment="Top" Width="25" BorderBrush="{x:Null}">
+        <Button x:Name="BtnBuscar" Content="" HorizontalAlignment="Left" Height="25" Margin="310,87,0,0" VerticalAlignment="Top" Width="25" BorderBrush="{x:Null}" Click="BtnBuscar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/buscar.png"/>
             </Button.Background>
         </Button>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="13" Margin="29,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" TextChanged="txtId_TextChanged" VerticalScrollBarVisibility="Visible" Visibility="Collapsed"/>
         <ComboBox x:Name="cbCliente" HorizontalAlignment="Left" Height="13" Margin="508,73,0,0" VerticalAlignment="Top" Width="240"/>
-        <ComboBox x:Name="cbMembresia" HorizontalAlignment="Left" Height="26" Margin="508,129,0,0" VerticalAlignment="Top" Width="240"/>
-        <ComboBox x:Name="cbEstado" HorizontalAlignment="Left" Height="24" Margin="508,186,0,0" VerticalAlignment="Top" Width="240"/>
+        <ComboBox x:Name="cbMembresia" HorizontalAlignment="Left" Height="26" Margin="508,129,0,0" VerticalAlignment="Top" Width="240" SelectionChanged="cbMembresia_SelectionChanged"/>
+        <ComboBox x:Name="cbEstado" HorizontalAlignment="Left" Height="24" Margin="508,186,0,0" VerticalAlignment="Top" Width="240" SelectionChanged="cbEstado_SelectionChanged"/>
         <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Height="40" Margin="347,368,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}" Click="BtnLimpiar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/escoba.png"/>
