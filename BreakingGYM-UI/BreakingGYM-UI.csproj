@@ -10,6 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="actualizar.png" />
+    <None Remove="buscar.png" />
+    <None Remove="editar-texto.png" />
+    <None Remove="eliminar %282%29.png" />
+    <None Remove="mas.png" />
+    <None Remove="regreso.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MahApps.Metro" Version="2.4.10" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="6.1.1" />
     <PackageReference Include="QRCoder" Version="1.6.0" />
@@ -19,6 +28,15 @@
   <ItemGroup>
     <ProjectReference Include="..\BreakingGymBL\BreakingGymBL.csproj" />
     <ProjectReference Include="..\BreakingGymEN\BreakingGymEN.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="actualizar.png" />
+    <Resource Include="buscar.png" />
+    <Resource Include="editar-texto.png" />
+    <Resource Include="eliminar (2).png" />
+    <Resource Include="mas.png" />
+    <Resource Include="regreso.png" />
   </ItemGroup>
 
 </Project>

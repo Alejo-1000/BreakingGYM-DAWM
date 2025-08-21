@@ -39,12 +39,20 @@
         <Button x:Name="BtnRefrescar" 
                 HorizontalAlignment="Left" Height="25" 
                 Margin="54,105,0,0" VerticalAlignment="Top" Width="25" 
-                BorderBrush="{x:Null}" Click="BtnRefrescar_Click" Background="#FF2B1616"/>
+                BorderBrush="{x:Null}" Click="BtnRefrescar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/actualizar.png"/>
+            </Button.Background>
+        </Button>
 
         <!-- Botón Buscar -->
         <Button x:Name="BtnBuscar" 
                 HorizontalAlignment="Left" Height="25" 
                 Margin="354,105,0,0" VerticalAlignment="Top" Width="25" 
-                BorderBrush="{x:Null}" Click="BtnBuscar_Click" Background="#FFA21919"/>
+                BorderBrush="{x:Null}" Click="BtnBuscar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/buscar.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </mah:MetroWindow>
