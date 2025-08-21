@@ -193,5 +193,12 @@ namespace BreakingGymUI
                 BtnModificar.Visibility = Visibility.Collapsed;
             }
         }
+
+        private void BtnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            TxtId.Text = string.Empty;
+            txtEstado.Text = string.Empty;
+           
+        }
     }
 }

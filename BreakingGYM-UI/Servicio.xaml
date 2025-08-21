@@ -41,7 +41,7 @@
         <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="137,110,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="144"/>
         <TextBox x:Name="txtDescripcion" HorizontalAlignment="Left" Margin="136,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="145"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="25,23,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="60" TextChanged="txtId_TextChanged" VerticalScrollBarVisibility="Visible" Visibility="Collapsed"/>
-        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Margin="271,312,0,0" VerticalAlignment="Top" Height="40" Width="40">
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Margin="271,312,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="BtnLimpiar_Click_1">
             <Button.BorderBrush>
                 <ImageBrush/>
             </Button.BorderBrush>

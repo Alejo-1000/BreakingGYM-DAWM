@@ -133,5 +133,10 @@ namespace BreakingGymUI
         {
             // Evento de selección de filas en el DataGrid (si necesitas usarlo después)
         }
+
+        private void BtnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            DtBuscar.Text = string.Empty;
+        }
     }
 }

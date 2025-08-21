@@ -182,5 +182,12 @@ namespace BreakingGymUI
                 
             }
         }
+
+        private void BtnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            txtId.Text = string.Empty;
+            TxtNombre.Text = string.Empty;
+            
+        }
     }
 }

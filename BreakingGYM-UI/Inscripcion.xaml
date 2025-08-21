@@ -67,7 +67,7 @@
         <ComboBox x:Name="cbCliente" HorizontalAlignment="Left" Height="13" Margin="508,73,0,0" VerticalAlignment="Top" Width="240"/>
         <ComboBox x:Name="cbMembresia" HorizontalAlignment="Left" Height="26" Margin="508,129,0,0" VerticalAlignment="Top" Width="240"/>
         <ComboBox x:Name="cbEstado" HorizontalAlignment="Left" Height="24" Margin="508,186,0,0" VerticalAlignment="Top" Width="240"/>
-        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Height="40" Margin="363,368,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}">
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Height="40" Margin="347,368,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}" Click="BtnLimpiar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/escoba.png"/>
             </Button.Background>

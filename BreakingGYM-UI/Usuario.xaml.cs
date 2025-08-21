@@ -222,5 +222,17 @@ namespace BreakingGymUI
                 btnEliminar.Visibility = Visibility.Collapsed;
             }
         }
+
+        private void BtnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            txtId.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtApellido.Text = string.Empty;
+            txtCelular.Text = string.Empty;
+            cbxIdRol.Text = string.Empty;
+            txtCuenta.Text = string.Empty;
+            txtContrasenia.Text = string.Empty;
+            txtBuscarUsuario.Text = string.Empty;
+        }
     }
 }

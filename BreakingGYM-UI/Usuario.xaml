@@ -62,7 +62,7 @@
         <TextBox x:Name="txtApellido" HorizontalAlignment="Left" Margin="564,119,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="163"/>
         <DataGrid x:Name="dgMostrarUsuario" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="39,153,369,10" SelectionChanged="dgMostrarUsuario_SelectionChanged"/>
         <ComboBox x:Name="cbxIdRol" HorizontalAlignment="Left" Margin="564,207,0,0" VerticalAlignment="Top" Width="163"/>
-        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Height="40" Margin="34,48,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}">
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Height="40" Margin="434,106,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}" RenderTransformOrigin="0.5,0.5" Click="BtnLimpiar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/escoba.png"/>
             </Button.Background>

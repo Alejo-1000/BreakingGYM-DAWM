@@ -38,7 +38,7 @@
         </Button>
         <Label Content="Tipo de documento" HorizontalAlignment="Left" Height="40" Margin="136,98,0,0" VerticalAlignment="Top" Width="157" FontFamily="Arial Rounded MT Bold" Foreground="White" FontSize="14"/>
         <Label Content="Documentos" HorizontalAlignment="Center" Height="47" VerticalAlignment="Top" Width="236" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="36"/>
-        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Margin="657,329,0,65" Width="40" Height="40" BorderBrush="{x:Null}">
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Margin="657,329,0,65" Width="40" Height="40" BorderBrush="{x:Null}" Click="BtnLimpiar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/escoba.png"/>
             </Button.Background>

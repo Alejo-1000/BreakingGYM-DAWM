@@ -48,6 +48,11 @@
             </Button.Background>
         </Button>
         <TextBox x:Name="TxtId" HorizontalAlignment="Left" Margin="47,22,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="38" TextChanged="TxtId_TextChanged" Visibility="Collapsed"/>
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Margin="347,364,0,0" VerticalAlignment="Top" Width="40" Height="40" BorderBrush="{x:Null}" Click="BtnLimpiar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/escoba.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </mah:MetroWindow>

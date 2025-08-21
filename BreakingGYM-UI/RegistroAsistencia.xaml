@@ -54,5 +54,10 @@
                 <ImageBrush ImageSource="/buscar.png"/>
             </Button.Background>
         </Button>
+        <Button x:Name="BtnLimpiar" Content="" HorizontalAlignment="Left" Margin="701,105,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Height="40" Width="40" Click="BtnLimpiar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/escoba.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </mah:MetroWindow>

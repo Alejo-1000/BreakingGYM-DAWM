@@ -231,6 +231,18 @@ namespace BreakingGymUI
             CbxRol.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario
             CbxRol.SelectedValuePath = "Id";
         }
+
+        private void BtnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            TxtId.Text = string.Empty;
+            TxtNombre.Text = string.Empty;
+            TxtApellido.Text = string.Empty;
+            CbxRol.Text = string.Empty;
+            TxtCelular.Text = string.Empty;
+            Cbxdocumento.Text = string.Empty;
+            TxtDocumento.Text = string.Empty;
+
+        }
     }
     
 }

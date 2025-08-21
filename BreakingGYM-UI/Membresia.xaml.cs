@@ -423,6 +423,17 @@ namespace BreakingGymUI
 
             }
         }
+
+        private void BtnLimpiar_Click(object sender, RoutedEventArgs e)
+        {
+            TxtId.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            CbxIdServicio.Text = string.Empty;
+            txtPrecio.Text = string.Empty;
+            txtDuracion.Text = string.Empty;
+            txtDescripcion.Text = string.Empty;
+            TxtBuscarMembresia.Text = string.Empty;
+        }
     }
 }
 
