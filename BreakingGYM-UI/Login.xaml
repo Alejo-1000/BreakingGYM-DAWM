@@ -14,13 +14,13 @@
         </Grid.Background>
         <Button x:Name="btnIniciar" Content="Iniciar Sesion" HorizontalAlignment="Left" Margin="447,305,0,0" VerticalAlignment="Top" Width="211" Background="#FF63BCCE" Click="btnIniciar_Click" BorderBrush="{x:Null}" Height="26" Foreground="#FF130909" FontFamily="Arial Rounded MT Bold" FontSize="12"/>
         <Button x:Name="btnCerrar" Content="Salir" HorizontalAlignment="Left" Margin="447,345,0,0" VerticalAlignment="Top" Width="211" Background="#FF8698A9" BorderBrush="{x:Null}" Foreground="#FF190606" FontFamily="Arial Rounded MT Bold" FontSize="12" Click="btnCerrar_Click"/>
-        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="447,190,0,0" TextWrapping="Wrap" Text="Ingrese el correo" VerticalAlignment="Top" Width="211" TextChanged="txtCorreo_TextChanged"/>
+        <TextBox x:Name="txtCorreo" HorizontalAlignment="Left" Margin="447,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" TextChanged="txtCorreo_TextChanged"/>
         <Label Content="Bienvenido" HorizontalAlignment="Left" Margin="539,141,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="20"/>
-        <PasswordBox x:Name="txtContrasenia" HorizontalAlignment="Left" Margin="447,249,0,0" VerticalAlignment="Top" Width="211"/>
+        <PasswordBox x:Name="txtContrasenia" HorizontalAlignment="Left" Margin="447,249,0,0"  VerticalAlignment="Top" Width="211"/>
         <TextBox x:Name="txtVisible" HorizontalAlignment="Left" Visibility="Collapsed" Margin="447,249,0,0" VerticalAlignment="Top" Width="211"/>
-        <Button x:Name="btnMostrar" Width="31" Height="26" 
-                HorizontalAlignment="Right" Margin="0,249,90,0" VerticalAlignment="Top"
-                Click="btnMostrar_Click">
+        <Button x:Name="btnMostrar" Width="35" Height="26" 
+                HorizontalAlignment="Right" Margin="0,249,86,0" VerticalAlignment="Top"
+                Click="btnMostrar_Click" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="pack://application:,,,/ojo_abierto.png"/>
             </Button.Background>

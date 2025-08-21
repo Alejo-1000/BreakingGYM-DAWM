@@ -42,7 +42,7 @@
             </Button>
             <GridSplitter Width="2" Background="#FFAEAEB2"/>
             <Button x:Name="btnServicio" Width="124" Height="41" Foreground="White" BorderBrush="{x:Null}" Click="btnServicio_Click" Background="{x:Null}">
-               
+
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center" Height="83" Width="112">
                     <TextBlock Text="Servicio" FontSize="14" FontWeight="Bold" Margin="0,0,5,0" VerticalAlignment="Center" FontFamily="Arial Rounded MT Bold"/>
                     <Image Source="/gym-equipment.png" Width="53" Height="28" VerticalAlignment="Center"/>
@@ -52,7 +52,7 @@
 
             <GridSplitter Background="#FFAEAEB2" Width="2"/>
             <Menu Width="32" Background="#FF28628C" Foreground="Black" Height="37">
-                <MenuItem x:Name="BtnOtros" Header="" FontFamily="Arial Rounded MT Bold" FontSize="13" Foreground="White" Height="29" Width="23">
+                <MenuItem x:Name="BtnOtros" Header="" FontFamily="Arial Rounded MT Bold" FontSize="13" Foreground="White" Height="35" Width="32">
                     <MenuItem.Background>
                         <ImageBrush ImageSource="/opcion.png" AlignmentX="Right" Stretch="Uniform" TileMode="FlipX" ViewboxUnits="RelativeToBoundingBox" ViewportUnits="RelativeToBoundingBox" Viewport="0,0,1,1" AlignmentY="Bottom" />
                     </MenuItem.Background>
@@ -87,6 +87,6 @@
                 </TransformGroup>
             </Image.RenderTransform>
         </Image>
-       
+
     </Grid>
 </mah:MetroWindow>
