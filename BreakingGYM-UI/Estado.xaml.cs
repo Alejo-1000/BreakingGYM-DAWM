@@ -179,5 +179,22 @@ namespace BreakingGymUI
                 txtEstado.Text = estadoSeleccionado.Nombre;
             }
         }
+
+        private void TxtId_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(TxtId.Text))
+            {
+                BtnEliminar.IsEnabled = true;   // habilitar botón eliminar
+                BtnModificar.IsEnabled = true;  // habilitar botón modificar
+
+            }
+
+            else
+            {
+                BtnEliminar.IsEnabled = false;
+                BtnModificar.IsEnabled = false;
+
+            }
+        }
     }
 }

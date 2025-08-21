@@ -199,5 +199,22 @@ namespace BreakingGymUI
             cbEstado.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario
             cbEstado.SelectedValuePath = "Id";
         }
+
+        private void txtId_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(TxtId.Text))
+            {
+                BtnEliminar.IsEnabled = true;   // habilitar botón eliminar
+                BtnModificar.IsEnabled = true;  // habilitar botón modificar
+
+            }
+
+            else
+            {
+                BtnEliminar.IsEnabled = false;
+                BtnModificar.IsEnabled = false;
+
+            }
+        }
     }
 }

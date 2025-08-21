@@ -30,15 +30,15 @@
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="TxtNombre" HorizontalAlignment="Left" Height="32" Margin="274,98,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="312"/>
-        <Button x:Name="BtnRegresar" Content="" HorizontalAlignment="Left" Height="50" Margin="740,10,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}">
+        <TextBox x:Name="TxtNombre" HorizontalAlignment="Left" Height="27" Margin="318,97,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270"/>
+        <Button x:Name="BtnRegresar" Content="" HorizontalAlignment="Left" Height="40" Margin="756,6,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/regreso.png"/>
             </Button.Background>
         </Button>
-        <Label Content="Tipo de documento" HorizontalAlignment="Left" Height="40" Margin="19,94,0,0" VerticalAlignment="Top" Width="238" FontFamily="Arial Rounded MT Bold" FontSize="24" Foreground="White"/>
-        <Label Content="Documentos" HorizontalAlignment="Left" Height="69" Margin="224,-9,0,0" VerticalAlignment="Top" Width="375" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="60"/>
-        <Button x:Name="btnLimpiar" Content="Button" HorizontalAlignment="Left" Margin="599,398,0,10"/>
+        <Label Content="Tipo de documento" HorizontalAlignment="Left" Height="40" Margin="136,98,0,0" VerticalAlignment="Top" Width="157" FontFamily="Arial Rounded MT Bold" Foreground="White" FontSize="14"/>
+        <Label Content="Documentos" HorizontalAlignment="Center" Height="47" VerticalAlignment="Top" Width="236" Foreground="White" FontFamily="Arial Rounded MT Bold" FontSize="36"/>
+        <Button x:Name="btnLimpiar" Content="Button" HorizontalAlignment="Left" Margin="597,388,0,20"/>
         <TextBox x:Name="txtId" HorizontalAlignment="Left" Margin="19,12,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="65" TextChanged="txtId_TextChanged"/>
 
     </Grid>

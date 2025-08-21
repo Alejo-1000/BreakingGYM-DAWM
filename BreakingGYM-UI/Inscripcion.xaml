@@ -63,7 +63,7 @@
                 <ImageBrush ImageSource="/buscar.png"/>
             </Button.Background>
         </Button>
-        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="13" Margin="29,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47"/>
+        <TextBox x:Name="txtId" HorizontalAlignment="Left" Height="13" Margin="29,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="47" TextChanged="txtId_TextChanged"/>
         <ComboBox x:Name="cbCliente" HorizontalAlignment="Left" Height="13" Margin="508,73,0,0" VerticalAlignment="Top" Width="240"/>
         <ComboBox x:Name="cbMembresia" HorizontalAlignment="Left" Height="26" Margin="508,129,0,0" VerticalAlignment="Top" Width="240"/>
         <ComboBox x:Name="cbEstado" HorizontalAlignment="Left" Height="24" Margin="508,186,0,0" VerticalAlignment="Top" Width="240"/>

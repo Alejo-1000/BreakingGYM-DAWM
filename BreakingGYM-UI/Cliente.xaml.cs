@@ -201,6 +201,7 @@ namespace BreakingGymUI
             {
                 btnEliminar.IsEnabled = true;   // habilitar botón eliminar
                 btnModificar.IsEnabled = true;  // habilitar botón modificar
+               
             }
 
             else
