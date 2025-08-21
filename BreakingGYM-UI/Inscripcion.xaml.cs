@@ -15,7 +15,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace BreakingGYM_UI
+namespace BreakingGymUI
 {
     /// <summary>
     /// Lógica de interacción para Inscripcion.xaml
