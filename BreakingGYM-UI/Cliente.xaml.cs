@@ -16,6 +16,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Microsoft.Data.SqlClient;
+using BreakingGymBL;
 
 namespace BreakingGymUI
 {
@@ -29,7 +30,7 @@ namespace BreakingGymUI
         ClienteEN clienteEN = new ClienteEN();
         private TipoDocumentoBL _Documento = new TipoDocumentoBL();
         private RolBL _rolBL = new RolBL();
-
+        private TarjetaBL TarjetaBL = new TarjetaBL();
         public Cliente()
         {
             InitializeComponent();
@@ -46,7 +47,7 @@ namespace BreakingGymUI
             {
                 IdRol = Convert.ToByte(CbxRol.SelectedValue),
                 IdTipoDocumento = Convert.ToByte(Cbxdocumento.SelectedValue),
-                IdTarjetaRFID=Convert.ToByte(CbNumeroRFID.SelectedValue),
+                IdTarjeta =Convert.ToByte(CbNumeroRFID.SelectedValue),
                 Documento = TxtDocumento.Text.Trim(),
                 Nombre = TxtNombre.Text.Trim(),
                 Apellido = TxtApellido.Text.Trim(),
@@ -56,7 +57,7 @@ namespace BreakingGymUI
 
             // Validar campos obligatorios
             if (cliente.IdRol <= 0 || cliente.IdTipoDocumento <= 0 ||
-                cliente.IdTarjetaRFID <=0
+                cliente.IdTarjeta <=0
                 ||
                 string.IsNullOrEmpty(cliente.Documento) ||
                 string.IsNullOrEmpty(cliente.Nombre) ||
@@ -146,7 +147,7 @@ namespace BreakingGymUI
             {
                 Id = Convert.ToByte(TxtId.Text),
                 IdRol = Convert.ToByte(CbxRol.SelectedValue),
-                IdTarjetaRFID=Convert.ToByte(CbNumeroRFID.SelectedValue),
+                IdTarjeta =Convert.ToByte(CbNumeroRFID.SelectedValue),
                 IdTipoDocumento = Convert.ToByte(Cbxdocumento.SelectedValue),
                 Documento = TxtDocumento.Text.Trim(),
                 Nombre = TxtNombre.Text,
@@ -155,7 +156,7 @@ namespace BreakingGymUI
                
 
             };
-            if (string.IsNullOrEmpty(cliente.Nombre) || string.IsNullOrEmpty(cliente.Apellido) || string.IsNullOrEmpty(cliente.Celular) || cliente.IdRol <= 0 || cliente.IdTipoDocumento <= 0||cliente.IdTarjetaRFID<=0  || string.IsNullOrEmpty(cliente.Documento))
+            if (string.IsNullOrEmpty(cliente.Nombre) || string.IsNullOrEmpty(cliente.Apellido) || string.IsNullOrEmpty(cliente.Celular) || cliente.IdRol <= 0 || cliente.IdTipoDocumento <= 0||cliente.IdTarjeta <=0  || string.IsNullOrEmpty(cliente.Documento))
             {
                 MessageBox.Show("Por favor, Complete todos los campos.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
@@ -232,6 +233,9 @@ namespace BreakingGymUI
             Cbxdocumento.ItemsSource = _Documento.MostrarTipoDocumento(); // Cargar estados desde el BL
             Cbxdocumento.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario
             Cbxdocumento.SelectedValuePath = "Id";
+            CbNumeroRFID.ItemsSource= TarjetaBL.MostrarTarjetaRFID();
+            CbNumeroRFID.DisplayMemberPath = "NumeroRFID";
+            CbNumeroRFID.SelectedValuePath = "Id";
             // Rol
             CbxRol.ItemsSource = _rolBL.MostrarRol(); // Cargar roles desde el BL
             CbxRol.DisplayMemberPath = "Nombre";   // lo que se muestra al usuario

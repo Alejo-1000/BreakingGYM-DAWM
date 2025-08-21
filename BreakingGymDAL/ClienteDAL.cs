@@ -18,7 +18,7 @@ namespace BreakingGymDAL
                     _comando.ExecuteReader(); while (_reader.Read()) { _Lista.Add(new ClienteEN
                     { Id = _reader.GetInt32(0), 
                         IdRol= _reader.GetInt32(1),
-                       IdTarjetaRFID = _reader.GetInt32(2),
+                       IdTarjeta = _reader.GetInt32(2),
                         IdTipoDocumento = _reader.GetInt32(3),
                         Documento =  _reader.GetString(4), 
                         Nombre = _reader.GetString(5), 
@@ -35,7 +35,7 @@ namespace BreakingGymDAL
                 SqlCommand _comando = new SqlCommand("GuardarCliente", _conn as SqlConnection);
                 _comando.CommandType = CommandType.StoredProcedure;
                 _comando.Parameters.Add(new SqlParameter("@IdRol", pclienteEN.IdRol));
-                _comando.Parameters.Add(new SqlParameter("@IdTarjetaRFID", pclienteEN.IdTarjetaRFID));
+                _comando.Parameters.Add(new SqlParameter("@IdTarjetaRFID", pclienteEN.IdTarjeta));
                 _comando.Parameters.Add(new SqlParameter("@IdTipoDocumento", pclienteEN.IdTipoDocumento));
 
                 _comando.Parameters.Add(new SqlParameter("@Documento", pclienteEN.Documento));
@@ -74,7 +74,7 @@ namespace BreakingGymDAL
                 _comando.CommandType = CommandType.StoredProcedure;
                 _comando.Parameters.Add(new SqlParameter("@Id", pclienteEN.Id));
                 _comando.Parameters.Add(new SqlParameter("@IdRol", pclienteEN.IdRol));
-                _comando.Parameters.Add(new SqlParameter("@IdTarjetaRFID,", pclienteEN.IdTarjetaRFID));
+                _comando.Parameters.Add(new SqlParameter("@IdTarjetaRFID,", pclienteEN.IdTarjeta));
                 _comando.Parameters.Add(new SqlParameter("@IdTipoDocumento", pclienteEN.IdTipoDocumento));
                 _comando.Parameters.Add(new SqlParameter("@Documento", pclienteEN.Documento));
                 _comando.Parameters.Add(new SqlParameter("@Nombre", pclienteEN.Nombre));

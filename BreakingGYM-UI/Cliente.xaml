@@ -55,7 +55,8 @@
                 <ImageBrush ImageSource="/escoba.png"/>
             </Button.Background>
         </Button>
-        <ComboBox x:Name="CbNumeroRFID" HorizontalAlignment="Left" Margin="622,63,0,0" VerticalAlignment="Top" Width="120"/>
+        <ComboBox x:Name="CbNumeroRFID" HorizontalAlignment="Left" Margin="621,108,0,0" VerticalAlignment="Top" Width="149"/>
+        <Label Content="TarjetaRFID" HorizontalAlignment="Left" Margin="654,70,0,0" VerticalAlignment="Top" Foreground="#FFFFFBFB" FontFamily="Arial Rounded MT Bold" FontSize="14"/>
 
     </Grid>
 </mah:MetroWindow>

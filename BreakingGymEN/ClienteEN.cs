@@ -9,14 +9,21 @@ namespace BreakingGymEN
 {
     public class ClienteEN : Persona
     {
-        public int IdTarjetaRFID { get; set; }
+        public string Documento { get; set; }   
+        public int IdTipoDocumento { get; set; }
+        public int IdTarjeta { get; set; }
 
-        public ClienteEN() : base() { }
+        public ClienteEN() : base() {
+            this.Documento = Documento;
+            this.IdTipoDocumento= IdTipoDocumento;
+        }
 
-        public ClienteEN(int Id, int IdRol, int IdTarjetaRFID, int IdTipoDocumento, string Documento, string Nombre, string Apellido, string Celular)
-            : base(Id, IdRol, IdTipoDocumento, Documento, Nombre, Apellido, Celular)
+        public ClienteEN(int Id, int IdRol, int IdTarjeta, int IdTipoDocumento, string Documento, string Nombre, string Apellido, string Celular)
+            : base(Id, IdRol, Nombre, Apellido, Celular)
         {
-            this.IdTarjetaRFID = IdTarjetaRFID;
+            this.Documento= Documento;
+            this.IdTipoDocumento = IdTipoDocumento;
+            this.IdTarjeta = IdTarjeta;
         }
 
     }     
