@@ -177,5 +177,10 @@ namespace BreakingGymUI
         {
             DtBuscar.Text = string.Empty;
         }
+
+        private void btnCerrrar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }

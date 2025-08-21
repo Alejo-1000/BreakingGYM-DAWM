@@ -43,7 +43,7 @@
         <TextBox x:Name="txtEstado" HorizontalAlignment="Left" Margin="80,170,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="246" Height="32"/>
         <Label Content="Nombre de estado" HorizontalAlignment="Left" Margin="114,132,0,0" VerticalAlignment="Top" FontSize="20" Foreground="White" Width="188" FontFamily="Arial Rounded MT Bold"/>
         <Label Content="Estado" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="48" Height="64" Foreground="White" FontFamily="Arial Rounded MT Bold"/>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="728,10,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="btnRegresar_Click" BorderBrush="{x:Null}">
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="734,12,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="btnRegresar_Click" BorderBrush="{x:Null}">
             <Button.Background>
                 <ImageBrush ImageSource="/regreso.png"/>
             </Button.Background>

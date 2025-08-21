@@ -29,7 +29,7 @@
         <TextBox x:Name="TxtCelular" HorizontalAlignment="Left" Margin="438,62,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
         <TextBox x:Name="TxtDocumento" HorizontalAlignment="Left" Margin="438,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
         <Label Content="Cliente" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="White" FontSize="36" FontFamily="Arial Rounded MT Bold" Margin="0,-5,0,0"/>
-        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="750,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.589,0.551" Width="40" Height="40" BorderBrush="{x:Null}" Click="btnRegresar_Click">
+        <Button x:Name="btnRegresar" Content="" HorizontalAlignment="Left" Margin="734,12,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.589,0.551" Width="40" Height="40" BorderBrush="{x:Null}" Click="btnRegresar_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/regreso.png"/>
             </Button.Background>

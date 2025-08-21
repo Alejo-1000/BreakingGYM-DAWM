@@ -35,7 +35,7 @@ namespace BreakingGymDAL
                 SqlCommand _comando = new SqlCommand("GuardarCliente", _conn as SqlConnection);
                 _comando.CommandType = CommandType.StoredProcedure;
                 _comando.Parameters.Add(new SqlParameter("@IdRol", pclienteEN.IdRol));
-                _comando.Parameters.Add(new SqlParameter("@IdTarjetaRFID", pclienteEN.IdTarjeta));
+                _comando.Parameters.Add(new SqlParameter("@IdTarjeta", pclienteEN.IdTarjeta));
                 _comando.Parameters.Add(new SqlParameter("@IdTipoDocumento", pclienteEN.IdTipoDocumento));
 
                 _comando.Parameters.Add(new SqlParameter("@Documento", pclienteEN.Documento));
@@ -74,7 +74,7 @@ namespace BreakingGymDAL
                 _comando.CommandType = CommandType.StoredProcedure;
                 _comando.Parameters.Add(new SqlParameter("@Id", pclienteEN.Id));
                 _comando.Parameters.Add(new SqlParameter("@IdRol", pclienteEN.IdRol));
-                _comando.Parameters.Add(new SqlParameter("@IdTarjetaRFID,", pclienteEN.IdTarjeta));
+                _comando.Parameters.Add(new SqlParameter("@IdTarjeta,", pclienteEN.IdTarjeta));
                 _comando.Parameters.Add(new SqlParameter("@IdTipoDocumento", pclienteEN.IdTipoDocumento));
                 _comando.Parameters.Add(new SqlParameter("@Documento", pclienteEN.Documento));
                 _comando.Parameters.Add(new SqlParameter("@Nombre", pclienteEN.Nombre));

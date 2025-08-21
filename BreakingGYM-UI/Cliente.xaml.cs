@@ -189,20 +189,20 @@ namespace BreakingGymUI
 
             if (dgCliente.SelectedItem != null)
             {
-                DataRowView row = (DataRowView)dgCliente.SelectedItem;
-
-                TxtId.Text = row["Id"].ToString();
-                CbxRol.Text = row["IdRol"].ToString();
-                CbNumeroRFID.Text = row["IdTarjetaRFID"].ToString();
-                Cbxdocumento.Text = row["IdTipoDocumento"].ToString();
-                TxtNombre.Text = row["Nombre"].ToString();
-                TxtApellido.Text = row["Apellido"].ToString();
-                TxtCelular.Text = row["Celular"].ToString();
-                TxtDocumento.Text = row["Documento"].ToString();
-               
-
+                var clienteSeleccionado = dgCliente.SelectedItem as ClienteEN;
+                if (clienteSeleccionado != null)
+                {
+                    TxtId.Text = clienteSeleccionado.Id.ToString();
+                    CbxRol.SelectedValue = clienteSeleccionado.IdRol;
+                    CbNumeroRFID.SelectedValue = clienteSeleccionado.IdTarjeta;
+                    Cbxdocumento.SelectedValue = clienteSeleccionado.IdTipoDocumento;
+                    TxtNombre.Text = clienteSeleccionado.Nombre;
+                    TxtApellido.Text = clienteSeleccionado.Apellido;
+                    TxtCelular.Text = clienteSeleccionado.Celular;
+                    TxtDocumento.Text = clienteSeleccionado.Documento;
+                }
             }
-            
+
         }
 
         private void txtId_TextChanged(object sender, TextChangedEventArgs e)

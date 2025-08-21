@@ -73,5 +73,10 @@
                 <ImageBrush ImageSource="/escoba.png"/>
             </Button.Background>
         </Button>
+        <Button x:Name="btnCerrar" Content="" HorizontalAlignment="Left" Margin="734,12,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="btnCerrar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/regreso.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </mah:MetroWindow>

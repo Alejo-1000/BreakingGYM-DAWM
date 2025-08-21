@@ -20,20 +20,20 @@
             <ColumnDefinition/>
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="BtnGuardar" Content="" Margin="474,348,276,38" BorderBrush="{x:Null}" Click="BtnGuardar_Click" Width="50" Height="50">
+        <Button x:Name="BtnGuardar" Content="" Margin="470,323,280,61" BorderBrush="{x:Null}" Click="BtnGuardar_Click" Width="50" Height="50">
             <Button.Background>
                 <ImageBrush ImageSource="/mas.png"/>
             </Button.Background>
 
         </Button>
-        <Button x:Name="BtnModificar" Content="" Margin="692,346,60,38" BorderBrush="{x:Null}" Click="BtnModificar_Click" Height="50" Width="50" Visibility="Collapsed" >
+        <Button x:Name="BtnModificar" Content="" Margin="681,323,69,61" BorderBrush="{x:Null}" Click="BtnModificar_Click" Height="50" Width="50" Visibility="Collapsed" >
             <Button.Background>
                 <ImageBrush ImageSource="/editar-texto.png"/>
             </Button.Background>
 
         </Button>
         <DataGrid x:Name="DataMembresia" HorizontalAlignment="Left" Height="241" Margin="33,174,0,0" VerticalAlignment="Top" Width="347" d:ItemsSource="{d:SampleData ItemCount=5}" SelectionChanged="DataMembresia_SelectionChanged"/>
-        <Button x:Name="BtnEliminar" Content="" HorizontalAlignment="Left" Height="50" Margin="584,348,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="BtnEliminar_Click" Visibility="Collapsed" >
+        <Button x:Name="BtnEliminar" Content="" HorizontalAlignment="Left" Height="50" Margin="575,323,0,0" VerticalAlignment="Top" Width="50" BorderBrush="{x:Null}" Click="BtnEliminar_Click" Visibility="Collapsed" >
             <Button.Background>
                 <ImageBrush ImageSource="/eliminar (2).png"/>
             </Button.Background>
@@ -53,7 +53,7 @@
         </Button>
         <TextBox x:Name="TxtBuscarMembresia" HorizontalAlignment="Left" Height="21" Margin="108,111,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="196"/>
         <Label x:Name="BuscarMembresía" Content="Buscar Membresía" HorizontalAlignment="Left" Height="30" Margin="118,77,0,0" VerticalAlignment="Top" Width="156" AutomationProperties.Name="" FontFamily="Arial Rounded MT Bold" FontSize="14" FontWeight="Medium" Foreground="White"/>
-        <Button x:Name="BtnVolver" Content="" HorizontalAlignment="Left" Height="43" Margin="746,10,0,0" VerticalAlignment="Top" Width="44" BorderBrush="{x:Null}" Click="BtnVolver_Click">
+        <Button x:Name="BtnVolver" Content="" HorizontalAlignment="Left" Height="40" Margin="734,12,0,0" VerticalAlignment="Top" Width="40" BorderBrush="{x:Null}" Click="BtnVolver_Click">
             <Button.Background>
                 <ImageBrush ImageSource="/regreso.png"/>
             </Button.Background>

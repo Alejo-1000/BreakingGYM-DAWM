@@ -61,5 +61,10 @@
             </Button.Background>
         </Button>
         <ComboBox x:Name="CbTarjetas" HorizontalAlignment="Left" Margin="519,106,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="btnCerrrar" Content="" HorizontalAlignment="Left" Margin="734,12,0,0" VerticalAlignment="Top" Height="40" Width="40" Click="btnCerrrar_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/regreso.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </mah:MetroWindow>
